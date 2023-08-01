@@ -1,5 +1,11 @@
 ﻿Console.Write("Введите номер задачи: ");
-int a = Convert.ToInt32(Console.ReadLine());
+int a = 0;
+try{
+a = Convert.ToInt32(Console.ReadLine());
+} catch (System.FormatException){
+    Console.Write("Это не номер");
+    return;
+}
 
 switch (a){
 
